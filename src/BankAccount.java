@@ -14,6 +14,7 @@ public class BankAccount {
             System.out.println("Deposit is less than 0");
         } else {
             balance = balance + a;
+            System.out.println("New Balance : " + balance);
         }
     }
 
@@ -22,6 +23,7 @@ public class BankAccount {
             System.out.println("Withdrawal is greater than current balance");
         } else {
             balance = balance - s;
+            System.out.println("New Balance : " + balance);
         }
     }
 
@@ -31,6 +33,10 @@ public class BankAccount {
 
     public String getUser() {
         return user;
+    }
+
+    public String toString() {
+        return "User : " + user + ", Balance : " + balance;
     }
 
 }
