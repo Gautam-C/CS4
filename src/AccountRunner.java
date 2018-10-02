@@ -3,7 +3,17 @@ public class AccountRunner {
 
         BankAccount test = new BankAccount("testUser", 69.90);
 
-        System.out.println(test.getBalance());
+        System.out.println("Balance : " + test.getBalance());
+        System.out.println("User : " + test.getUser());
+
+        System.out.println(System.lineSeparator());
+
+        test.addBalance(55);
+        System.out.println(System.lineSeparator());
+        test.removeBalance(124.9);
+        System.out.println(System.lineSeparator());
+
+        System.out.println(test.toString());
 
     }
 }
