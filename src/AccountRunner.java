@@ -1,7 +1,7 @@
 public class AccountRunner {
     public static void main(String args[]) {
 
-        BankAccount test = new BankAccount("testUser", 69.90);
+        BankAccount test = new BankAccount("testUser", 69.90, "testPassword");
 
         System.out.println("Balance : " + test.getBalance());
         System.out.println("User : " + test.getUser());
@@ -15,5 +15,9 @@ public class AccountRunner {
 
         System.out.println(test.toString());
 
+        test.changePassword("definitelySecure");
+        System.out.println(test.getPassword());
+
+        System.out.println(test.toString());
     }
 }
