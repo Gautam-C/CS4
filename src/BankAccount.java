@@ -7,7 +7,13 @@ public class BankAccount {
     public BankAccount (String user1, double balance1, String password1) {
 
         user = user1;
-        balance = balance1;
+
+        if (balance1 >= 0) {
+            balance = balance1;
+        } else {
+            System.out.println("Your balance is negative");
+        }
+
         password = password1;
     }
 
@@ -36,28 +42,48 @@ public class BankAccount {
         }
     }
 
+    /**
+     * returns current ballance
+     */
     public double getBalance() {
 
         return balance;
     }
 
+    /**
+     *returns user
+     */
     public String getUser() {
 
         return user;
     }
 
-
-
+    /**
+     * returns password
+     */
     public String getPassword() {
 
         return password;
     }
 
+    /**
+     * allows you to change your password
+     */
     public void changePassword(String newPassword) {
 
         password = newPassword;
     }
 
+    /**
+     * changes owner
+     */
+    public void newOwner(String newOwner) {
+        user = newOwner;
+    }
+
+    /**
+     * returns user, balance, and password
+     */
     public String toString() {
         return "User : " + user + ", Balance : " + balance + ", Password : " + password;
     }
